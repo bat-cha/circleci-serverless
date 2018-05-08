@@ -15,7 +15,7 @@ RUN apk upgrade --update-cache --available \
       curl \
       nodejs \
       nodejs-npm \
-      gcc \
+      build-base \
     && npm install -g serverless \
     && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
     && go get -u github.com/jstemmer/go-junit-report \
