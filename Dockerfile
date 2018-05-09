@@ -9,4 +9,5 @@ RUN apk upgrade --update-cache --available \
     && apk update \
     && apk add --no-cache \
       ca-certificates \
+      git \
     && npm install -g serverless
