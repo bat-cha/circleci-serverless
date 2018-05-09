@@ -5,4 +5,8 @@ VOLUME ${HOME}/.aws
 VOLUME /app
 WORKDIR /app
 
-RUN npm install -g serverless
+RUN apk upgrade --update-cache --available \
+    && apk update \
+    && apk add --no-cache \
+      ca-certificates \
+    && npm install -g serverless
