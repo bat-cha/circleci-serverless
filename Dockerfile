@@ -10,4 +10,4 @@ RUN apk upgrade --update-cache --available \
     && apk add --no-cache \
       ca-certificates \
       git \
-    && npm install -g serverless
+    && npm install -g serverless serverless-domain-manager
