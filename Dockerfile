@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:current-alpine
 LABEL maintainer="bat-cha <baptiste.chatrain@gmail.com>"
 
 VOLUME ${HOME}/.aws
