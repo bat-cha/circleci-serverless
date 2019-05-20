@@ -10,7 +10,14 @@ RUN apk upgrade --update-cache --available \
     && apk add --no-cache \
       ca-certificates \
       git \
+      bash \
     && npm install -g \
       serverless \
       serverless-domain-manager \
       serverless-aws-documentation
+
+# Install aws-cli
+RUN apk -Uuv add groff less python py-pip
+RUN pip install awscli
+RUN apk --purge -v del py-pip
+RUN rm /var/cache/apk/*
